@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
-}
+*{
+  margin:0;
+  padding:0;
+  font-family: Arial, Helvetica, sans-serif;
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1{
+  font-size: larger;
 }
+body{
+  background-image: url(./images/bac.png);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+}
+.app{
+  display: flex;
+  position:relative;
+  width: 100vw;
+  height: 100vh;
+  
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+}
+.container{
   display: flex;
   flex-direction: column;
+  position: absolute;
+  top: 37%;
+  left: 30%;
+  width: 50%;
+  max-height: max-content;
+  padding: 10px;
+}
+.ques{
+  background-color: rgb(4, 4, 70);
+  color: white;
+  padding: 20px;
+  border-radius: 70px;
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.options{
+  display: grid;
+  grid-template-columns: 50% 50%; 
+  width: 100%;
+}
+.option{
+  background-color: rgb(26, 25, 25);
+  padding: 10px;
+  margin: 10px;
   color: white;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  min-width: max-content;
+}
+.selected{
+  background-color: rgb(0, 58, 250) !important;
+}
+.correct{
+  background-color: green !important;
+}
+.wrong{
+  background-color: red !important;
+}
+.none{
+  display: none;
+}
+.next button{
+  background-color: black;
+  color: white;
+  min-width: 100px;
+  min-height: 30px;
+  border: 1px solid black;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.prize{
+  color: white;
+  background-color: rgb(4, 4, 70);
+  max-height: max-content;
+  margin: 10px;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+}
+.active{
+  background-color: rgb(3, 3, 241);
+  width: 95%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid white;
+}
+.money{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid white;
+
+}
+.smaller{
+  color: rgb(255, 255, 255);
+  display: none;
+  position: absolute;
+  top: 25%;
+  left: 30%;
+  width: max-content;
+}
+.earned{
+  display: flex;
+  color: white;
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.flex{
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timer{
+  color: white;
+  position: absolute;
+  top:40%;
+  left: 45%;
+  background-color: rgb(0, 0, 0);
+  padding: 30px;
+  border-radius: 50%;
+  font-size: xx-large;
 }
+
+@media screen and (max-width: 600px) {
+  h1{
+    font-size: large !important;
+  }
+  .app{
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+  }
+  .container{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 10%;
+    width: 70%;
+
+  }
+    .options{
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+    .option{
+      width: 100%;
+    }
+    .prize{
+      display: none;
+      flex-direction: row;
+      width: 100%;
+      height: max-content;
+    }
+    .smaller{
+      display: flex;
+    }
+    .earned{
+      top: 40%;
+      left: 35%;
+    }
+}
+
